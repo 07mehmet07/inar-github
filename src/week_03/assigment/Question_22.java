@@ -7,53 +7,32 @@ public class Question_22 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter year (e.g., 2013): ");
-        int year = input.nextInt();
-        System.out.print("Enter month (1-12): ");
-        int m = input.nextInt();
-        System.out.print("Enter the day of the month (1-31) :");
-        int q = input.nextInt(); // The day of month (1-31)
-        int j = year / 100; // century
-        int k = (year * 100)/100; // year of the century
-        if (m == 1) {
-            m = 13;
-        } else if (m == 2) {
-            m = 14;
-        }
-        int h = (q + (26 * (m + 1) / 10) + k + (k / 4) + (j / 4) + (5 * j)) % 7;
-        switch (h) {
-            case 0:
-                System.out.println("Day of week is Saturday ");
-                break;
-            case 1:
-                System.out.println("Day of week is Sunday");
-                break;
-            case 2:
-                System.out.println("Day of week is  Monday");
-                break;
-            case 3:
-                System.out.println("Day of week is Tuesday");
-                break;
-            case 4:
-                System.out.println("Day of week is Wednesday");
-                break;
-            case 5:
-                System.out.println("Day of week is Thursday");
-                break;
-            case 6:
-                System.out.println("Day of week is Friday");
-                break;
+        System.out.print("Enter a point with two coordinates :");
+        double x2 = input.nextDouble();
+        double y2 = input.nextDouble();
 
+        double x1 = 0;
+        double y1 = 0;
+        double distance = Math.pow(Math.pow((x2-x1), 2) + Math.pow(y2-y1, 2), 0.5);
+        if (distance <= 10) {
+            System.out.println("The point " + (double) x2 + " + " + (double) y2 + " is in the circle");
+        } else {
+            System.out.println("The point " + (double) x2 + " + " + (double) y2 + " is out the circle");
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
-
-
-
-
 }
-    Enter year (e.g., 2013): 2015
-        Enter month (1-12):  1
-        Enter the day of the month (1-31) :25
-        Day of week is Sunday

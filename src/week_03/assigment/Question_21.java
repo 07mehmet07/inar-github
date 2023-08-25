@@ -11,15 +11,19 @@ public class Question_21 {
         int mounth = input.nextInt();
         System.out.print("Enter the day of the mounth: 1-31 :");
         int day = input.nextInt();
-        int j = year / 100;
-        int k =year % 100;
 
 
         if (mounth == 1) {
-            mounth = 13;
+            mounth = 13 ;
+            --year;
+
         } else if (mounth == 2) {
             mounth = 14;
+            --year;
         }
+
+        int j = year / 100;
+        int k =year % 100;
 
 int dayofWeek = (day + (26*(mounth + 1)/10) + k + (k/4) + (j/4) + (5*j)) % 7 ;
 
