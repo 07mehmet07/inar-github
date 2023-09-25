@@ -21,7 +21,7 @@ public class Question_51 {
             index++;
         }
 
-        
+
         if (prefix.length() > 0)
             System.out.println("The common prefix is " + prefix);
         else
