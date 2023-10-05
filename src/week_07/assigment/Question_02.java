@@ -2,7 +2,7 @@ package week_07.assigment;
 
 import java.util.Scanner;
 
-public class Question_2 {
+public class Question_02 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
