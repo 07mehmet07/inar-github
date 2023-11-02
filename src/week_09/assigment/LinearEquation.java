@@ -65,4 +65,6 @@ public class LinearEquation {
                     (this.getA() * this.getD() - this.getB() * this.getC());
             return y;
         }
+
+
 }
