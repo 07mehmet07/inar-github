@@ -2,7 +2,7 @@ package week_10.assignment.exercise_13;
 
 public class Question_10_13 {
     public static void main(String[] args) {
-        MyRectangle2D r1 = new MyRectangle2D(2, 2, 4.5, 5.9);
+        MyRectangle2D r1 = new MyRectangle2D(2, 2, 5.5, 4.9);
 
         System.out.println("Rectangle:");
         System.out.println("-----------------------");

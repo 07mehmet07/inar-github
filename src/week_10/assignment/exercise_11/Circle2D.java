@@ -6,6 +6,7 @@ public class Circle2D {
     private double radius;
 
     public Circle2D() {
+
         this(0, 0, 1);
     }
 

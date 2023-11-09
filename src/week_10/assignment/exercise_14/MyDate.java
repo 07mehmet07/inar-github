@@ -1,4 +1,4 @@
-package week_10.assignment.exercise_15;
+package week_10.assignment.exercise_14;
 import java.util.GregorianCalendar;
 public class MyDate {
     private int year;
