@@ -1,26 +1,35 @@
 package week_12.assigment.exercise_27;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class Question_12_27 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+//        File directory = new File("C:\\Users\\Dell\\IdeaProjects\\inar-github\\src\\week_12\\assigment\\exercise_27\\directory");
+//       directory.mkdir();
+//
+//       for (int i = 1; i <= 15; i++) {
+//           for (int j = 1; j <= 15; j++) {
+//               PrintWriter file = new PrintWriter("C:\\Users\\Dell\\IdeaProjects\\inar-github\\src\\week_12\\assigment\\exercise_27\\directory\\Question" + i + "_" + j);
+//            }
+//        }
         if (args.length != 1) {
-            System.out.println("Usage: java Exercise12_28 *");
+            System.out.println("Invalid format. The format is -> DirectoryName");
             System.exit(1);
         }
 
-        for (String s : args) {
-            File file = new File(s);
-            StringBuilder sb1 = new StringBuilder(s);
+        File directory = new File(args[0]);
+        File[] files = directory.listFiles();
 
-            if (s.matches("Exercise\\d_\\d.*")) {
-                int n = s.indexOf("_");
-                sb1.insert(n - 1, 0);
+        for (int i = 0; i < files.length; i++) {
+            StringBuilder fileName = new StringBuilder(files[i].getName());
+            String fileName1 = files[i].getName();
+            if (fileName1.matches("Question\\d_.*")) {
+                fileName.insert(8, 0);
             }
-
-            File newName = new File(String.valueOf(sb1));
-            file.renameTo(newName);
+            File newFile = new File(files[i].getParent() + "/" + fileName);
+            files[i].renameTo(newFile);
         }
-
     }
 }
