@@ -24,7 +24,7 @@ public class Question_12_11 {
                 Scanner input = new Scanner(file);
         ) {
             while (input.hasNext()) {
-                s1 += input.nextLine() + "\n";
+                s1 = input.nextLine() ;
                 s2 = s1.replaceAll(toRemove, "");
             }
 
