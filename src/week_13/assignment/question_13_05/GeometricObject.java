@@ -1,8 +1,10 @@
-package week_13.assignment.question_13_01;
+package week_13.assignment.question_13_05;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 
-public abstract class GeometricObject  {
+public abstract class GeometricObject implements Comparable<GeometricObject> {
     private String color;
     private boolean isFilled;
     private Date date;
@@ -44,7 +46,9 @@ public abstract class GeometricObject  {
 
     @Override
     public String toString() {
-        return "color : " + color + " and filled : " + isFilled;
+        return "It is created on " + date +
+                "\ncolor : " + color +
+                "\nfilled : " + isFilled;
     }
 
     public abstract double getArea();
@@ -53,8 +57,21 @@ public abstract class GeometricObject  {
 
     @Override
     public boolean equals(Object obj) {
-        return this.getArea() == ((GeometricObject)obj).getArea();
+        return this.getArea() == ((week_13.assignment.question_13_01.GeometricObject) obj).getArea();
     }
 
+    @Override
+    public int compareTo(GeometricObject o) {
+        if (this.getArea() > o.getArea()) {
+            return 1;
+        } else if (this.getArea() == o.getArea()) {
+            return 0;
+        } else
+            return -1;
+    }
 
+    public static GeometricObject max(GeometricObject o1, GeometricObject o2) {
+        return o1.compareTo(o2) == 1 ? o1 : o2;
+    }
 }
+

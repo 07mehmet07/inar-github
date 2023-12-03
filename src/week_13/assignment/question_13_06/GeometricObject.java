@@ -1,8 +1,8 @@
-package week_13.assignment.question_13_01;
+package week_13.assignment.question_13_06;
 
 import java.util.Date;
 
-public abstract class GeometricObject  {
+public abstract class GeometricObject {
     private String color;
     private boolean isFilled;
     private Date date;
@@ -44,7 +44,9 @@ public abstract class GeometricObject  {
 
     @Override
     public String toString() {
-        return "color : " + color + " and filled : " + isFilled;
+        return "It is created on " + date +
+                "\ncolor : " + color +
+                "\nfilled : " + isFilled;
     }
 
     public abstract double getArea();
@@ -53,8 +55,7 @@ public abstract class GeometricObject  {
 
     @Override
     public boolean equals(Object obj) {
-        return this.getArea() == ((GeometricObject)obj).getArea();
+        return this.getArea() == ((week_13.assignment.question_13_01.GeometricObject) obj).getArea();
     }
-
 
 }
