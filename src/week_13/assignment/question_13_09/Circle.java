@@ -49,13 +49,11 @@ public class Circle extends GeometricObject implements Comparable<Circle> {
     }
 
 
-    public boolean equals(Object obj) throws ClassCastException {
-        boolean result;
+    public boolean equals(Object obj) {
+
         if (obj instanceof Circle) {
-            result = this.compareTo((Circle) obj) == 0;
-        } else {
-            throw new ClassCastException();
+            return this.compareTo((Circle) obj) == 0;
         }
-        return result;
+        return false;
     }
 }
