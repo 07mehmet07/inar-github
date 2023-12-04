@@ -2,7 +2,7 @@ package week_13.assignment.question_13_08;
 
 import java.util.ArrayList;
 
-public class MyStack implements Cloneable{
+public class MyStack implements Cloneable {
     private ArrayList<Object> list = new ArrayList<>();
 
     public boolean isEmpty() {
@@ -34,9 +34,11 @@ public class MyStack implements Cloneable{
 
     @Override
     public Object clone() throws CloneNotSupportedException {
+        MyStack o = (MyStack) super.clone();
+        o.list = (ArrayList<Object>) (list.clone());
+        return o;
 
-        MyStack myStack = (MyStack) super.clone();
-        myStack.list = (ArrayList<Object>) (list.clone());
-        return myStack;
     }
+
+
 }

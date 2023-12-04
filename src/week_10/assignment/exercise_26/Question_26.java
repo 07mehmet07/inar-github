@@ -14,14 +14,19 @@ public class Question_26 {
         int result = 0;
 
         switch (args[1].charAt(0)) {
+
             case '+':
                 result = Integer.parseInt(args[0]) + Integer.parseInt(args[2]);
+                break;
             case '-':
                 result = Integer.parseInt(args[0]) - Integer.parseInt(args[2]);
+                break;
             case '*':
                 result = Integer.parseInt(args[0]) * Integer.parseInt(args[2]);
+                break;
             case '/':
                 result = Integer.parseInt(args[0]) / Integer.parseInt(args[2]);
+
         }
         System.out.println(args[0] + ' ' + args[1] + ' ' + args[2] + " = " + result);
     }
