@@ -1,6 +1,5 @@
 package week_13.assignment.question_13_18;
 
-import week_13.assignment.question_13_14.Rational;
 import week_13.assignment.question_13_15.Rational2;
 
 import java.math.BigInteger;

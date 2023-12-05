@@ -65,6 +65,7 @@ public class Complex1 implements Cloneable{
     }
 
     public double abs() {
+
         return Math.sqrt(Math.pow(realPart, 2) + Math.pow(imaginaryPart, 2));
     }
 

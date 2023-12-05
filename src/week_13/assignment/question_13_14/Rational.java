@@ -79,6 +79,7 @@ public class Rational extends Number implements Comparable<Rational> {
 
     @Override
     public boolean equals(Object other) {
+
         return ((this.subtract((Rational) (other))).getNumerator() == 0);
     }
 
@@ -107,7 +108,7 @@ public class Rational extends Number implements Comparable<Rational> {
 
     @Override
     public float floatValue() {
-        return 0;
+        return (float) doubleValue();
     }
 
     @Override
