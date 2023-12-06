@@ -13,7 +13,7 @@ public class Question_13_21 {
         Rational b = new Rational(input.nextInt(), 1);
         Rational c = new Rational(input.nextInt(), 1);
 
-        Rational h = new Rational(-b.getNumerator(), -2 * a.getNumerator());
+        Rational h = new Rational(-b.getNumerator(), 2 * a.getNumerator());
         Rational k = (a.multiply(h.multiply(h)).add(b.multiply(h))).add(c);
 
         System.out.println("h is " + h + " k is " + k);
