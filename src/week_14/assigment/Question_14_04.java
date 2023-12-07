@@ -1,9 +1,6 @@
 package week_14.assigment;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.util.*;
 
 public class Question_14_04 {
     public static void main(String[] args) {
@@ -17,6 +14,8 @@ public class Question_14_04 {
         for (int i = 0; i < number; i++) {
             list.add(input.nextInt());
         }
+
+
 
 
 
