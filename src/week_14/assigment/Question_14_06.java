@@ -14,6 +14,7 @@ public class Question_14_06 {
 
         List<Integer> odd = new ArrayList<>();
         List<Integer> even = new ArrayList<>();
+
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) % 2 != 0){
                 odd.add(list.get(i));

@@ -27,9 +27,7 @@ public class Question_14_16{
                         map.put(array[i], map.get(array[i]) + 1);
                     }
                 }
-
             }
-
 
         }
         for (Map.Entry<String, Integer> entry : map.entrySet()){

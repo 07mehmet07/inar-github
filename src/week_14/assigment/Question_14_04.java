@@ -6,37 +6,30 @@ public class Question_14_04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        ArrayList<Integer> list = new ArrayList<>();
-
-        System.out.print("Enter the size n for Arraylist A :");
-        int number = input.nextInt();
-        System.out.print("Enter " + number + " integers for Arraylist A :");
-        for (int i = 0; i < number; i++) {
-            list.add(input.nextInt());
+        System.out.print("Enter the size 'n' for ArrayList A: ");
+        int n1 = input.nextInt();
+        ArrayList<Integer> A = new ArrayList<>();
+        System.out.print("Enter " + n1 + " Integers for ArrayList A:");
+        for (int i = 0; i < n1; i++) {
+            A.add(input.nextInt());
         }
+        Collections.sort(A);
+        System.out.println(A);
 
+        System.out.println();
 
-
-
-
-        ArrayList<Integer> list1 = new ArrayList<>();
-
-        System.out.print("\nEnter the size 'n' for ArrayList B: ");
-        int numbers2 = input.nextInt();
-        System.out.print("Enter " + numbers2 + " Integers for ArrayList B: ");
-        for (int i = 0; i < numbers2; i++) {
-            list1.add(input.nextInt());
+        System.out.print("Enter the size 'n' for ArrayList B: ");
+        int n2 = input.nextInt();
+        ArrayList<Integer> B = new ArrayList<>();
+        System.out.print("Enter " + n2 + " Integers for ArrayList B:");
+        for (int i = 0; i < n2; i++) {
+            B.add(input.nextInt());
         }
-        list.addAll(list1);
-        Collections.sort(list);
+        Collections.sort(B);
+        Collections.reverse(B);
+        System.out.println(B);
 
-        HashSet<Integer> list2 = new HashSet<>();
-
-        System.out.println("Merged and sorted ArrayList C");
-        for (int i = 0; i < list.size(); i++) {
-            list2.add(list.get(i));
-        }
-        System.out.println(list2);
-
+        A.addAll(B);
+        System.out.println("Merged and sorted ArrayList C:\n" + A);
     }
 }

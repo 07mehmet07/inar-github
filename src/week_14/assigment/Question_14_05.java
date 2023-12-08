@@ -9,6 +9,7 @@ public class Question_14_05 {
 
         List<Integer> list = new ArrayList<>();
 
+
         System.out.print("Enter the integer numbers for ArrayList (enter -1 to stop) : ");
         int num = input.nextInt();
         while (num != -1) {
