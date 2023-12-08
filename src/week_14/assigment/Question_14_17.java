@@ -9,7 +9,7 @@ public class Question_14_17 {
         List<Integer> list1 = new ArrayList<>();
 
         System.out.println("Enter integers (enter 0 to stop) : ");
-        int num ;
+        int num;
         while ((num = input.nextInt()) != 0) {
             list1.add(num);
         }
@@ -22,15 +22,12 @@ public class Question_14_17 {
         }
         int maxNumber = Collections.max(map.values());
 
-        List<Integer> theMostTimes = new ArrayList<>();
 
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == maxNumber) {
-                theMostTimes.add(entry.getKey());
+        for (Integer i : map.keySet()) {
+            if (map.get(i) == maxNumber) {
+                System.out.println(i + " ==> " + map.get(i) + " times ");
             }
         }
-        System.out.println("Number(s) with the most Occurrences :\n");
-        System.out.println(theMostTimes + "==> " + maxNumber);
 
 
     }
