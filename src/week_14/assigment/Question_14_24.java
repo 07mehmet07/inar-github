@@ -29,6 +29,15 @@ public class Question_14_24 {
         Set<Integer> set = new HashSet<>();
         for (int i = 0; i < num.size(); i++) {
             if (!set.add(num.get(i))) {
+                for (int j = 0; j < i; j++) {
+                    if (num.get(i) == num.get(j)) {
+                        if (i - j > k) {
+                            return false;
+                        } else
+                            return true;
+                    }
+
+                }
                 return true;
             }
 
