@@ -4,14 +4,17 @@ import java.util.*;
 
 public class Question_14_25 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+
         List<Integer> list = new ArrayList<>();
+
         for (int i = 0; i < 15; i++) {
             list.add((int) (Math.random() * 100 + 1));
         }
         System.out.println(list);
+
         int generated = (int) (Math.random() * 100 + 1);
         System.out.println("Generated Target : " + generated);
+
         ArrayList<Integer> numbers = sumOfNumbers(list, generated);
         if (numbers.size() == 2) {
             System.out.println("Number are : " + numbers.get(0) + " , " + numbers.get(1));
