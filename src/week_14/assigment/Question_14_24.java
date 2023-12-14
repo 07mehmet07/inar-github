@@ -21,8 +21,6 @@ public class Question_14_24 {
         } else {
             System.out.println("is there a nearby duplicate with absolute difference at most 5 ? " + result);
         }
-
-
     }
 
     public static boolean containsNearbyDuplicate(ArrayList<Integer> num, int k) {
@@ -36,13 +34,10 @@ public class Question_14_24 {
                         } else
                             return true;
                     }
-
                 }
                 return true;
             }
-
         }
         return false;
     }
-
 }

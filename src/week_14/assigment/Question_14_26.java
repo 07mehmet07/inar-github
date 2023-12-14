@@ -15,8 +15,6 @@ public class Question_14_26 {
         System.out.println("Original Linked List\n" + list);
         LinkedList<Integer> list2 = updateList(list);
         System.out.println("Updated Link List\n" + list2);
-
-
     }
 
     private static LinkedList<Integer> updateList(LinkedList<Integer> list) {
