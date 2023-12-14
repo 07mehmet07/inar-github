@@ -1,14 +1,14 @@
 package week_14.assigment;
 
-import java.util.ArrayList;
+
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Random;
 
 public class Question_14_26 {
     public static void main(String[] args) {
         Random random = new Random();
         LinkedList<Integer> list = new LinkedList<>();
+
         for (int i = 0; i < 5; i++) {
             list.add(random.nextInt(100));
         }
